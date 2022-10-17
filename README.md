@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1>
   Boilerplate Scss
 </h1>
 <p>Desenvolvido para ajudar outros devs na agilidade de seu código css/scss.</p>
