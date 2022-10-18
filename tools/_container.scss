@@ -1,11 +1,12 @@
 @use "src/scss/tools/rem-calc" as function;
+$maxGrid: 12;
 
 @mixin rowAndColSize() {
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(12, 8.33%);
-  gap: 0.007%;
+  grid-template-columns: repeat(12, 7.33%);
+  gap: 1.1%;
 }
 
 .container {
@@ -18,14 +19,13 @@
 
   .row {
     @include rowAndColSize();
-    grid-column-start: 1;
-    grid-column-end: 12;
-  }
+    grid-column: span $maxGrid;
 
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      @include rowAndColSize();
-      grid-column: span $i;
+    @for $i from 1 through $maxGrid {
+      .col-#{$i} {
+        @include rowAndColSize();
+        grid-column: span $i;
+      }
     }
   }
 }
