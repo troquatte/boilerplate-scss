@@ -1,22 +1,6 @@
-@use "src/scss/tools/rem-calc" as function;
+@use 'src/scss/tools/rem-calc' as function;
 
 :root {
-  --background: #fbf9f7;
-
-  --white: #fff;
-  --black: #1b2e35;
-
-  --gray-50: #a9a8b4;
-  --green-50: #60e331;
-
   --primary: #ed7438;
-  --darken-primary: #{darken(#ed7438, 20%)};
-  --lighten-primary: #{lighten(#ed7438, 5%)};
-
   --secondary: #5d4fb0;
-  --darken-secondary: #{darken(#5d4fb0, 20%)};
-  --lighten-secondary: #{lighten(#5d4fb0, 5%)};
-
-  --100-heigth: #{calc(100vh - #{function.rem-calc(117)})};
-  --border-radius: #{function.rem-calc(10)};
 }
